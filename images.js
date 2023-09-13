@@ -5,8 +5,8 @@ import {principal} from './app.js'
 
 
  async function conversion(archivo) {
- const pdfPath = path.join('./images', archivo);
-const outputDir = './imagesFinal'; 
+ const pdfPath = path.join('./Images', archivo);
+const outputDir = './ImagesFinal'; 
 
 const opts = {
   format: '.jpg', 
@@ -24,7 +24,7 @@ try {
 }
 
 export function images(){
-const carpeta = './images'
+const carpeta = './Images'
 
 fs.readdir(carpeta, async (error, archivos) => {
     if (error) {
@@ -35,7 +35,7 @@ const extensioneshabilitadas = '.jpg';
 for (const archivo of archivos){
     const extension = path.extname(archivo).toLowerCase();
     if (extension != '.pdf' ){
-        fs.rename(`./images/${archivo}`, './imagesfinal/image-1.jpg', async (error) => {
+        fs.rename(`./Images/${archivo}`, './Imagesfinal/image-1.jpg', async (error) => {
             if (error) {
               console.error('Error al cambiar el nombre del archivo:', error);
             } else {
@@ -44,7 +44,7 @@ for (const archivo of archivos){
               await principal();
             
             }
-        fs.unlink(`./images/${archivo}`, (error) => {
+        fs.unlink(`./Images/${archivo}`, (error) => {
                 if (error) {
                   console.error('Error al borrar el archivo:', error);
                 } else {
@@ -57,7 +57,7 @@ for (const archivo of archivos){
     } else if (extension == '.pdf'){
         await conversion(archivo);
 
-        fs.unlink(`./images/${archivo}`, (error) => {
+        fs.unlink(`./Images/${archivo}`, (error) => {
             if (error) {
               console.error('Error al borrar el archivo:', error);
             } else {

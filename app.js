@@ -13,13 +13,13 @@ dotenv.config();
  async function llamado(){
 
 
-  const imageName = './imagesFinal/image-1.jpg';
+  const imageName = './ImagesFinal/image-1.jpg';
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const imagePath = path.join(__dirname, imageName);
   const imageBytes = fs.readFileSync(imagePath);
 
-console.log('ESTA ES LA CONTRASEÑA QUE NECESITO',process.env.PASSWORD)
+
     const subscriptionKey = process.env.CONTRASEÑA;
     const url = 'https://extraccion1.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2023-02-01-preview&features=read&language=en&gender-neutral-caption=False';
 
@@ -118,7 +118,7 @@ console.log('ESTA ES LA CONTRASEÑA QUE NECESITO',process.env.PASSWORD)
   
 }   
 // console.log(NumberCampo)
-console.log('respuestas para el formulario', arrayResultado)
+//console.log('respuestas para el formulario', arrayResultado)
 NumberCampo++
 
 }
