@@ -53,6 +53,8 @@ servidor.get('*',(req,res)=>{
 })
 
 
+const PORT = process.env.PORT
+
 servidor.listen(4000,()=>{
 
     console.log('servidor funcionando')
