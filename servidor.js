@@ -53,9 +53,9 @@ servidor.get('*',(req,res)=>{
 })
 
 
-const PORT = process.env.PORT
+const port = process.env.PORT
 
-servidor.listen(4000,()=>{
+servidor.listen(port,()=>{
 
     console.log('servidor funcionando')
 });
