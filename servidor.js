@@ -57,6 +57,6 @@ const port = process.env.PORT
 
 servidor.listen(port,()=>{
 
-    console.log('servidor funcionando')
+    console.log('funcionando')
 });
 
