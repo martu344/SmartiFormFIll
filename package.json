@@ -3,7 +3,7 @@
   "name": "pruebas",
   "version": "1.0.0",
   "description": "",
-  "main": "servidor.js",
+  "main": "index.js",
   "author": "Bottaro Martin",
   "license": "ISC",
 
