@@ -1,34 +1,31 @@
-import convert from 'pdf2image';
-import fs from 'fs';
+import fs from 'fs'
 import path from 'path';
 import {principal} from './app.js'
-
+import { fromPath } from "pdf2pic";
 
  async function conversion(archivo) {
- const pdfPath = path.join('./Images', archivo);
+ const pdfPath = await path.join('./Images', archivo);
 const outputDir = './ImagesFinal'; 
+const options = {
+  density: 100,
+  saveFilename: "untitled",
+  savePath:outputDir,
+  format: "png",
+  width: 600,
+  height: 600
+};
+const convert = await fromPath('./doc1.pdf', options);
+const pageToConvertAsImage = 1;
 
+convert(pageToConvertAsImage, { responseType: "image" })
+  .then((resolve) => {
+    console.log("Page 1 is now converted as image");
 
-console.log(pdfPath)
-console.log(archivo)
-try {
-    const result = await convert.convertPDF(archivo,{
-      density : 200,
-      quality : 100,
-      outputFormat : {},
-      outputType : 'jpg',
-      pages : '1'
+    return resolve;
   });
-    const image = result[0];
-    const outputPath = `${outputDir}/image.jpg`;
-    fs.writeFileSync(outputPath, image);
 
-    console.log('Conversión exitosa. Imagen guardada en:', outputPath);
-  } catch (error) {
-    console.error('Error al convertir el PDF:', error);
-  }
+
 }
-
 
 export function images(){
 const carpeta = './Images'

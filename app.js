@@ -78,7 +78,7 @@ dotenv.config();
       var activado=true
       arrayResultado.length=0
 
-       contenido.map((elemento,index)=> { console.log(elemento.content);
+       contenido.map((elemento,index)=> { //console.log(elemento.content);
          // console.log(NumberCampo)
           
        if(elemento.content == arrayDeCampo[NumberCampo][0] || elemento.content == arrayDeCampo[NumberCampo][1] ){
@@ -222,7 +222,7 @@ await page2.keyboard.press('Enter')
 export async function principal(){
   try{
     await llamado();
-   await form();
+   //await form();
 
   }catch(error){
     console.log(error)

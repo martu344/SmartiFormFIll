@@ -39,8 +39,8 @@ servidor.use(express.static(path.join(__dirname, './Public')));
 
 
 servidor.post('/upload',  upload.any(), (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./Public/procesado.html'));
-    
+    //res.sendFile(path.resolve(__dirname,'./Public/procesado.html'));
+    res.redirect('./index.html')
     images()
   });
 
