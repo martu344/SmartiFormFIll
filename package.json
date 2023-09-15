@@ -15,6 +15,6 @@
     "puppeteer": "^20.8.3"
   },
   "scripts": {
-    "start": "node servidor.js"
+    "start": "node index.js"
   }
 }
