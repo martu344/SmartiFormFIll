@@ -1,4 +1,4 @@
-import pdf from 'pdf-poppler';
+import convert from 'pdf2image';
 import fs from 'fs';
 import path from 'path';
 import {principal} from './app.js'
@@ -8,20 +8,27 @@ import {principal} from './app.js'
  const pdfPath = path.join('./Images', archivo);
 const outputDir = './ImagesFinal'; 
 
-const opts = {
-  format: '.jpg', 
-  out_dir: outputDir, 
-  out_prefix: 'image', 
-  page: '1', 
-};
 
+console.log(pdfPath)
+console.log(archivo)
 try {
-    const result = await pdf.convert(pdfPath, opts);
-    console.log('Conversión exitosa:', result);
+    const result = await convert.convertPDF(archivo,{
+      density : 200,
+      quality : 100,
+      outputFormat : {},
+      outputType : 'jpg',
+      pages : '1'
+  });
+    const image = result[0];
+    const outputPath = `${outputDir}/image.jpg`;
+    fs.writeFileSync(outputPath, image);
+
+    console.log('Conversión exitosa. Imagen guardada en:', outputPath);
   } catch (error) {
     console.error('Error al convertir el PDF:', error);
   }
 }
+
 
 export function images(){
 const carpeta = './Images'
