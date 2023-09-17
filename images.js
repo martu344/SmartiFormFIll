@@ -16,7 +16,7 @@ const opts = {
 };
 
 try {
-    const result = await pdf.convert(pdfPath, opts);
+    //const result = await pdf.convert(pdfPath, opts);
     console.log('Conversión exitosa:', result);
   } catch (error) {
     console.error('Error al convertir el PDF:', error);
