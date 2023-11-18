@@ -1,11 +1,8 @@
 .cuerpo{
     background-color: rgb(66, 66, 66);
 }
-img{
-    margin-top: 5vh;
-}
+
 #titulo{
-    margin-top: 10vh;
     margin-bottom: 5vh;
 }
 #contenedor{

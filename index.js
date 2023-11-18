@@ -13,7 +13,7 @@ let contador = 1;
 // Configurar la ubicación donde se guardarán los archivos
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './images'); // Directorio de destino
+    cb(null, './Images'); // Directorio de destino
   },
   filename: function (req, file, cb) {
     const extname = path.extname(file.originalname);
@@ -35,12 +35,12 @@ const upload = multer({ storage: storage });
 
 // Ruta para manejar la carga de archivos
 
-servidor.use(express.static(path.join(__dirname, 'public')));
+servidor.use(express.static(path.join(__dirname, './Public')));
 
 
 servidor.post('/upload',  upload.any(), (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/procesando.html'));
-    
+    //res.sendFile(path.resolve(__dirname,'./Public/procesado.html'));
+    res.redirect('./index.html')
     images()
   });
 
@@ -53,8 +53,10 @@ servidor.get('*',(req,res)=>{
 })
 
 
-servidor.listen(4000,()=>{
+const port = process.env.PORT
 
-    console.log('Ingresa a http://localhost:4000')
+servidor.listen(port,()=>{
+
+    console.log('funcionando')
 });
 

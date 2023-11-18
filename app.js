@@ -147,8 +147,8 @@ NumberCampo++
      const page = await navegador.newPage();
      await page.goto('http://10.62.12.16/SuperintendenciaCientifica')
     
-     await page.type('[placeholder="Nombre de Usuario"]','robottaro')
-     await page.type('[placeholder="Password"]','485847')
+     await page.type('[placeholder="Nombre de Usuario"]',process.env.USUARIO_CIENTIFICA)
+     await page.type('[placeholder="Password"]',process.env.PASSWORD_CINETIFICA)
      await page.click('.btn.btn-primary.btn-block.btn-flat')
      const page2 = await navegador.newPage();
      await page2.goto('http://10.62.12.16/SuperintendenciaCientifica/v.php?v=NuevaLEF')
