@@ -11,9 +11,9 @@
 <hr>
 <br>
 <p align="center">
-Proyecto personal echo en Node.js!
-Inteligencia artificial empleada: microsoft azure ocr (ComputerVision)
-Poyecto realizado para la policia cientifica; Sede castelar.
+Proyecto personal echo en Node.js!<br>
+Inteligencia artificial empleada: microsoft azure ocr (ComputerVision)<br>
+Poyecto realizado para la policia cientifica; Sede castelar.<br>
 El mismo rellena un formulario online a partir de la carga de un archivo pdf o una imagen del formulario manual, 
 en el que se desarrollan las actuaciones correspondientes a cada echo; y deben ser virtualizadas y enviadas a la base de datos de la policia de la provincia de Buenos Aires;
 pensado a partir de la necesidad de un personal de la policia cientifica; el proyecto fue presentado en la sede de castelar con exito el cual se desempeña de forma local,
