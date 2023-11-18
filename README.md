@@ -1,6 +1,3 @@
-# SmartiFormFIll
-
-
 <div align="center">
 <h1 align="center">SmartiFormFIll-Node.js👋</h1>
 </div>
@@ -10,11 +7,9 @@
 
 <hr>
 <br>
-<p>
 Proyecto personal echo en Node.js!<br>
 Inteligencia artificial empleada: microsoft azure ocr (ComputerVision)<br>
 Poyecto realizado para la policia cientifica; Sede castelar.<br>
-  </p>
 <p align="center">
 El mismo rellena un formulario online a partir de la carga de un archivo pdf o una imagen del formulario manual, 
 en el que se desarrollan las actuaciones correspondientes a cada echo; y deben ser virtualizadas y enviadas a la base de datos de la policia de la provincia de Buenos Aires;
