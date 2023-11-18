@@ -10,7 +10,7 @@
 
 <hr>
 <br>
-<p align="center">
+<p>
 Proyecto personal echo en Node.js!<br>
 Inteligencia artificial empleada: microsoft azure ocr (ComputerVision)<br>
 Poyecto realizado para la policia cientifica; Sede castelar.<br>
